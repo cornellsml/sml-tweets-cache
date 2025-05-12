@@ -13,7 +13,7 @@ jobs:
 
       - name: Fetch RSS feed
         run: |
-          curl -sSL -A "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0" \ https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.xml
+          curl -sSL -A "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0" \ "https://nitter.poast.org/CUSocialMedia/rss" -o feeds/CUSocialMedia.xml
           if [ ! -f feeds/CUSocialMedia.xml ]; then
             echo "Failed to fetch RSS feed"
             exit 1
