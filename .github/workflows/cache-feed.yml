@@ -1,9 +1,9 @@
 name: Cache Nitter RSS Feed
 
 on:
-  schedule:
-    - cron: "0 * * * *"  # Every hour
   workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   fetch-and-push:
@@ -13,6 +13,7 @@ jobs:
 
       - name: Fetch RSS feed
         run: |
+          mkdir -p feeds
           curl -sSL https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.xml
 
       - name: Commit and push
