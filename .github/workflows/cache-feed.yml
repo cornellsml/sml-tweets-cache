@@ -1,0 +1,24 @@
+name: Cache Nitter RSS Feed
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Every hour
+  workflow_dispatch:
+
+jobs:
+  fetch-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch RSS feed
+        run: |
+          curl -sSL https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.xml
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add feeds/CUSocialMedia.xml
+          git commit -m "Update feed" || echo "No changes"
+          git push
