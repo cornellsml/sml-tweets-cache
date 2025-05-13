@@ -3,17 +3,18 @@ name: Cache Nitter RSS Feed
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *' #   Every hour
 
 jobs:
   fetch-and-push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Fetch RSS feed
         run: |
-          curl -A "Mozilla/5.0" https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.xml
+          curl -s https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.xml
           if [ ! -f feeds/CUSocialMedia.xml ]; then
             echo "Failed to fetch RSS feed"
             exit 1
