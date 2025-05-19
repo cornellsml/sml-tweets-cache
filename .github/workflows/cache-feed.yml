@@ -14,11 +14,7 @@ jobs:
 
       - name: Fetch RSS feed
         run: |
-          curl -A "Mozilla/5.0" https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.html
-          if [ ! -f feeds/CUSocialMedia.xml ]; then
-            echo "Failed to fetch RSS feed"
-            exit 1
-          fi
+          curl -v -A "Mozilla/5.0" https://nitter.poast.org/CUSocialMedia/rss -o feeds/CUSocialMedia.html
           
       - name: Commit and push
         run: |
