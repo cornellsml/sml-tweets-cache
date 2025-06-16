@@ -708,6 +708,9 @@ if __name__ == '__main__':
         "next_token": "7140dibdnow9c7btw453owwa7jx6ht2b6p8sxkblixc1c"
     }
 }
+    num_tweets = len(tweets["data"])
+    print(tweets)
+    print(f"Extracted {num_tweets} tweets")
     rss_tree = create_rss_feed(tweets, USERNAME)
     save_rss(rss_tree, RSS_FILE)
     print(f"✅ RSS feed saved to {RSS_FILE}")
