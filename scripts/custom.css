@@ -1,0 +1,93 @@
+/** * Custom CSS for tweets on the news page
+ * This is found in Appearance > Custom CSS
+ */
+/* ##################### news page ###################### */
+iframe nav{
+    display: none;
+}
+.rssjb ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rssjb li {
+  display: flex; 
+  align-items: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Fix avatar sizing and spacing */
+.rssjb .avatar-wrapper {
+  flex: 0 0 48px; /* fixed width */
+}
+
+.rssjb .avatar-wrapper img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rssjb .tweet-content-wrapper {
+  flex: 1;
+  margin-left: 12px;
+  min-width: 0; /* Important to avoid overflow */
+}
+
+.rssjb p.username{
+  display: block;
+  font-size: 18px;
+  margin: 0px;
+}
+
+.rssjb p.username a{
+    color: black;
+    font-weight: 525;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.rssjb p.username a:hover{
+  text-decoration: underline;
+}
+
+.rssjb p.username span{
+    color: gray; 
+    font-size: 18px;
+}
+
+.rssjb p.title {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.rssjb p.title a {
+  font-size: 18px;
+  padding: 0px;
+  color: #1da1f2;
+}
+.rssjb p.title a:hover {
+  text-decoration: underline;
+}
+
+.rssjb .datetime {
+  display: inline-block;
+  color: #657786;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.sidebar_right #secondary-nav .main-body, .sidebar_right #secondary .main-body {
+    border-bottom: 1px solid #e4e4e4;
+}
