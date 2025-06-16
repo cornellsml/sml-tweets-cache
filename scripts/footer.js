@@ -84,4 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     linkWrapper.appendChild(clonedTweet);
     tweet.replaceWith(linkWrapper);
   });
+  const element = document.getElementById('secondary-nav'); // Get the element by its ID
+  element.style.visibility = 'visible'; // Set the visibility property to 'hidden'
 });

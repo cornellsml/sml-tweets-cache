@@ -2,6 +2,10 @@
  * This is found in Appearance > Custom CSS
  */
 /* ##################### news page ###################### */
+#secondary-nav{
+    visibility: hidden;
+}
+
 iframe nav{
     display: none;
 }
