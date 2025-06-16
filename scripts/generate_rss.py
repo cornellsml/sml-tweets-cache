@@ -128,8 +128,9 @@ def save_rss(tree, filename):
 
 if __name__ == '__main__':
     tweets = get_user_tweets(USER_ID)
+    num_tweets = len(tweets["data"])
     print(tweets)
-    print(f"Extracted {len(tweets["data"])} tweets")
+    print(f"Extracted {num_tweets} tweets")
     rss_tree = create_rss_feed(tweets, USERNAME)
     save_rss(rss_tree, RSS_FILE)
     print(f"✅ RSS feed saved to {RSS_FILE}")
