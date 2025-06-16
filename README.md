@@ -11,7 +11,7 @@ Use the Twitter API to fetch the most recent tweets, format them into an RSS fee
 - 🔁 A **Python script** [`scripts/generate_rss.py`](scripts/generate_rss.py) retrieves the 10 most recent tweets via the Twitter API.
 - 📄 Tweets are converted into a styled **RSS feed XML file** [https://cornellsml.github.io/sml-tweets-cache/feeds/cusocialmedia_rss.xml](https://cornellsml.github.io/sml-tweets-cache/feeds/cusocialmedia_rss.xml).
 - 🌐 The XML file is **hosted on GitHub Pages**.
-- 🕒 A **GitHub Actions cron job** [`.github/workflows/update_rss.yml`](.github/workflows/update_rss.yml) runs the script every 3 days.
+- 🕒 A **GitHub Actions cron job** [`.github/workflows/update-rss.yml`](.github/workflows/update-rss.yml) runs the script every 3 days.
 - 📥 On CampusPress (WordPress), the RSS feed is displayed using:
   - The **RSS Just Better** plugin
   - **Custom CSS** (WordPress `Advanced Settings → Custom Code → Footer Code`) for styling

@@ -5,7 +5,7 @@ from dateutil import parser as date_parser
 import os
 
 # Constants
-BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
+BEARER_TOKEN = os.getenv("BEARER_TOKEN")
 USERNAME = 'CUSocialMedia'
 USER_ID = 132922064 # Value was fetched from using Twitter API v2 /2/users/by/username/CUSocialMedia
 MAX_TWEETS = 10
