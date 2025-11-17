@@ -78,9 +78,9 @@ def format_entities(tweet, media_map):
                 media = media_map.get(media_key)
                 if media:
                     if media["type"] == 'photo':
-                        text += f'<img src="{media["url"]}" alt="" style="max-width:{width}%; max-height: 300px; height:auto; aspect-ratio:{aspect_ratio}; object-fit: cover;" />'
+                        text += f'<img src="{media["url"]}" alt="" style="max-width:{width}% !important; max-height: 300px; height:auto; aspect-ratio:{aspect_ratio}; object-fit: cover;" />'
                     elif media["type"] in ['video', 'animated_gif']:
-                        text += f'<img src="{media["preview_image_url"]}" alt="" style="max-width:{width}%; max-height: 300px; height:auto; aspect-ratio:{aspect_ratio}; object-fit: cover;" />'
+                        text += f'<img src="{media["preview_image_url"]}" alt="" style="max-width:{width}% !important; max-height: 300px; height:auto; aspect-ratio:{aspect_ratio}; object-fit: cover;" />'
             text += '</div>'
     return text
 
