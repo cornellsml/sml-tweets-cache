@@ -67,7 +67,7 @@ def format_entities(tweet, media_map):
         # Media attachments
         if "attachments" in tweet and "media_keys" in tweet["attachments"]:
             count = len(tweet["attachments"]['media_keys'])
-            text += f'<div style="display:flex; flex-wrap:wrap; border-radius:16px; overflow: hidden; width: fit-content;">'
+            text += f'<div style="display:flex; flex-wrap:wrap; border-radius:16px; margin-top: 10px; overflow: hidden; width: fit-content;">'
             if count > 1:
                 width = 50
                 aspect_ratio = 4/3
