@@ -7,13 +7,13 @@ import os
 # Constants
 BEARER_TOKEN = os.getenv("BEARER_TOKEN")
 USERNAME = 'CUSocialMedia'
-USER_ID = 132922064 # Value was fetched from using Twitter API v2 /2/users/by/username/CUSocialMedia
+USER_ID = 132922064 # Value was fetched from using X API v2 /2/users/by/username/CUSocialMedia
 MAX_TWEETS = 10
 RSS_FILE = os.path.join(os.path.dirname(__file__), '..', 'feeds', 'cusocialmedia_rss.xml')
 
-# Fetches the latest tweets from a user using Twitter API v2
+# Fetches the latest tweets from a user using X API v2
 def get_user_tweets(user_id):
-    url = f'https://api.twitter.com/2/users/{user_id}/tweets'
+    url = f'https://api.x.com/2/users/{user_id}/tweets'
     headers = {'Authorization': f'Bearer {BEARER_TOKEN}'}
     params = {
         'max_results': MAX_TWEETS,
