@@ -8,7 +8,7 @@ X's current privacy policies requires users to log in to X to see tweets. Hence,
 
 ## Our solution: 
 Use the X API to fetch the most recent tweets, format them into an RSS feed, and display them on our WordPress site using the **RSS Just Better** plugin, styled with custom CSS and JavaScript. It is displayed here:  https://socialmedialab.cornell.edu/news/
-- 🔁 A **Python script** [`scripts/generate_rss.py`](scripts/generate_rss.py) retrieves the 10 most recent tweets via the Twitter API.
+- 🔁 A **Python script** [`scripts/generate_rss.py`](scripts/generate_rss.py) retrieves the 10 most recent tweets via the X API.
 - 📄 Tweets are converted into a styled **RSS feed XML file** [https://cornellsml.github.io/sml-tweets-cache/feeds/cusocialmedia_rss.xml](https://cornellsml.github.io/sml-tweets-cache/feeds/cusocialmedia_rss.xml).
 - 🌐 The XML file is **hosted on GitHub Pages**.
 - 🕒 A **GitHub Actions cron job** [`.github/workflows/update-rss.yml`](.github/workflows/update-rss.yml) runs the script every 3 days.
